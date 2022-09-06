@@ -1,38 +1,136 @@
+* {
+  box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: navajowhite;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card {
+  display: flex;
+  width: 40%;
+  height: 40vh;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card .profile {
+  flex: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-around;
+  z-index: 1;
+}
+
+.card .profile img {
+  border: solid 2px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
+
+.card .profile div {
+  background-color: rgba(0, 0, 0, 0.1);
   color: white;
+  padding: 3px 10px;
+  border-radius: 10px;
+  font-family: "Times New Roman";
+  font-size: 0.7em;
 }
 
-.App-link {
-  color: #61dafb;
+.card .more {
+  position: relative;
+  flex: 70%;
+  height: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.information {
+  background-color: white;
+  padding: 5px 10px;
+  position: absolute;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  line-height: 1.7em;
+  font-family: "Arial";
 }
+.information .name2 {
+  text-align: center;
+  font: 2em "Helvetica Narrow";
+  margin-bottom: 0;
+}
+
+.card .information .text-bottom {
+  align-self: flex-end;
+}
+
+.info-slider {
+  border-left: solid 1px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+.info-slider .name1 {
+  text-align: center;
+  font: 2em "Helvetica Narrow";
+  margin-bottom: 0;
+}
+.info-slider .grid-box {
+  display: grid;
+  height: 70%;
+  justify-content: space-between;
+  align-content: space-between;
+  grid-template-columns: 20% 20% 20% 20%;
+  grid-template-areas: "A A B B" "C D E F";
+}
+.info-slider .grid-box div {
+  text-align: center;
+  font: 1.1em "Calibri Light";
+}
+.info-slider .grid-box .item1 {
+  grid-area: A;
+  text-align: left;
+}
+.info-slider .grid-box .item2 {
+  grid-area: B;
+  text-align: right;
+}
+.info-slider .grid-box .item3 {
+  grid-area: C;
+}
+.info-slider .grid-box .item4 {
+  grid-area: D;
+}
+.info-slider .grid-box .item5 {
+  grid-area: E;
+}
+.info-slider .grid-box .item6 {
+  grid-area: F;
+}
+.info-slider .grid-box p {
+  margin: 0 auto;
+  font-weight: bold;
+  font-size: 0.8em;
+}
+.info-slider .grid-box .icon {
+  font-size: 40px;
+}
+.info-slider .grid-box span:last-child {
+  display: block;
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+.slideShow {
+  transform: translateX(0);
+}
+
+/*# sourceMappingURL=App.css.map */
