@@ -19,7 +19,7 @@
 .card
     display: flex
     width: 40%
-    height: 40vh
+    height: 45vh
     border-radius: 8px
     overflow: hidden
 
@@ -139,7 +139,6 @@
 @media screen and (max-width: 600px)
     .card
         width: 85%
-        height: 45vh
         flex-direction: column
         .profile
             width: 100%
@@ -167,6 +166,11 @@
                 width: 30%
         .more .info-slider .grid-box .icon
             font-size: 25px
+@media screen and (max-width: 992px) and (orientation: landscape)
+    .App
+        height: 160vh
+        .card
+            height: 75vh
 
 
 
