@@ -11,7 +11,7 @@ export const InfoSlider = ({slide}) => {
             {({background, color}) => (
                 <div className={`info-slider ${slide && 'slideShow'}`}
                      style={{backgroundColor: background, color: color}}>
-                        <p className="name1">Jane Doe</p>
+                    <span className="name1">Jane Doe</span>
                     <div className="grid-box">
                         <div className="item1">Group Name<br />Position/Role</div>
                         <div className="item2">Joined January 2019<br />City, Country</div>

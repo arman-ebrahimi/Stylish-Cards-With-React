@@ -6,7 +6,7 @@ export const Profile = () => {
             {({background}) => (
                 <div className="profile" style={{backgroundColor: background}}>
                     <div>LEVEL 13</div>
-                    <img src="/user.jpg" alt="profile" width="70%" />
+                    <img src="/user.jpg" alt="profile" />
                     <div>5,312 POINTS</div>
                 </div>
             )}

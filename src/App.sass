@@ -24,13 +24,14 @@
     overflow: hidden
 
 .card .profile
-    flex: 30%
+    width: 30%
     @include flex-column
     z-index: 1
 
 .card .profile img
     border: solid 2px rgba(0,0,0,0.2)
     border-radius: 50%
+    width: 70%
 
 .card .profile div
     background-color: rgba(0,0,0,0.1)
@@ -42,7 +43,7 @@
 
 .card .more
     position: relative
-    flex: 70%
+    width: 70%
     height: 100%
 
 .information
@@ -52,7 +53,7 @@
     height: 100%
     display: flex
     flex-direction: column
-    justify-content: space-between
+    justify-content: space-around
     line-height: 1.7em
     font-family: "Arial"
     .name2
@@ -67,6 +68,9 @@
     padding: 5px
     width: 100%
     height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-around
     position: absolute
     transform: translateX(-100%)
     transition: transform 0.3s ease-in-out
@@ -119,5 +123,50 @@
 
 .slideShow
     transform: translateX(0)
+
+@media screen and (max-width: 1100px)
+    .card
+        width: 50%
+@media screen and (max-width: 992px)
+    .card
+        width: 60%
+@media screen and (max-width: 778px)
+    .card
+        width: 70%
+@media screen and (max-width: 680px)
+    .card
+        width: 80%
+@media screen and (max-width: 600px)
+    .card
+        width: 85%
+        height: 45vh
+        flex-direction: column
+        .profile
+            width: 100%
+            height: 40%
+            flex-direction: row
+            img
+                width: 25%
+        .more
+            width: 100%
+            height: 60%
+            .information
+                line-height: 1.3em
+                .name2
+                    margin-top: 0
+            .info-slider .grid-box
+                div
+                    font-size: 0.9em
+                .icon
+                    font-size: 30px
+@media screen and (max-width: 488px)
+    .card
+        width: 90%
+        .profile
+            img
+                width: 30%
+        .more .info-slider .grid-box .icon
+            font-size: 25px
+
 
 
